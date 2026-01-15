@@ -20,7 +20,6 @@
       position: relative;
     }
 
-    /* Badge kiri */
     .badge {
       position: absolute;
       top: 30px;
@@ -31,9 +30,9 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 14px;
+      text-align: center;
     }
 
-    /* Pita kanan */
     .ribbon {
       position: absolute;
       top: 0;
@@ -47,14 +46,8 @@
       text-align: center;
     }
 
-    .logo {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .logo img {
-      height: 90px;
-    }
+    .logo { text-align: center; margin-top: 20px; }
+    .logo img { height: 90px; }
 
     h1 {
       text-align: center;
@@ -79,43 +72,33 @@
     .data {
       width: 100%;
       border-collapse: collapse;
-    }
-
-    .data td {
-      padding: 6px 4px;
-      vertical-align: top;
       font-size: 18px;
     }
 
-    .label {
-      width: 220px;
+    .data td { padding: 6px 4px; vertical-align: top; }
+    .label { width: 220px; font-weight: bold; }
+    .colon { width: 10px; }
+
+    /* === SPESIFIKASI TEKNIS (TABLE STYLE) === */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12pt;
+      margin-top: 10px;
+    }
+
+    .specs-table th {
+      background-color: #f8f8f8;
+      color: #333;
       font-weight: bold;
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #e0e0e0;
     }
 
-    .colon {
-      width: 10px;
-    }
-
-    /* spesifikasi */
-    .spec {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .spec h3 {
-      text-align: center;
-      color: #c0392b;
-      margin-bottom: 10px;
-    }
-
-    .divider {
-      position: absolute;
-      left: 50%;
-      width: 2px;
-      background: #000;
-      top: 0;
-      bottom: 0;
+    .specs-table td {
+      padding: 8px;
+      border: 1px solid #e0e0e0;
     }
 
     .footer {
@@ -141,7 +124,7 @@
   <div class="ribbon">Unit<br>Ke-1</div>
 
   <div class="logo">
-    <img src="asset/logo-sekolah.png" alt="Logo Sekolah">
+    <img src="assets/logo-sd-sekolah.png" alt="Logo Sekolah SDN 1 Kertawirama">
   </div>
 
   <h1>DETAIL INVENTARIS BARANG</h1>
@@ -159,35 +142,21 @@
   </table>
 
   <div class="section-title">Spesifikasi Teknis</div>
-  <div class="spec">
-    <div>
-      <h3>ORIGINAL SPEK</h3>
-      <table class="data">
-        <tr><td class="label">Ukuran Layar</td><td class="colon">:</td><td>14 Inch</td></tr>
-        <tr><td class="label">Resolusi</td><td class="colon">:</td><td>1080p FHD</td></tr>
-        <tr><td class="label">Sistem Operasi</td><td class="colon">:</td><td>Windows 11</td></tr>
-        <tr><td class="label">Prosesor</td><td class="colon">:</td><td>AMD Ryzen 5 7430U</td></tr>
-        <tr><td class="label">Grafis</td><td class="colon">:</td><td>AMD Radeon Graphics</td></tr>
-        <tr><td class="label">RAM</td><td class="colon">:</td><td>8 GB</td></tr>
-        <tr><td class="label">Penyimpanan</td><td class="colon">:</td><td>256 GB</td></tr>
-        <tr><td class="label">Konektivitas</td><td class="colon">:</td><td>HDMI, USB, WIFI, BT, Audio, microSD</td></tr>
-      </table>
-    </div>
-
-    <div>
-      <h3>UPGRADE SPEK</h3>
-      <table class="data">
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-        <tr><td>-</td></tr>
-      </table>
-    </div>
-  </div>
+  <table class="specs-table">
+    <tr>
+      <th>Spesifikasi</th>
+      <th>Original Spek</th>
+      <th>Upgrade Spek</th>
+    </tr>
+    <tr><td>Ukuran Layar</td><td>14 Inch</td><td>-</td></tr>
+    <tr><td>Resolusi</td><td>1080p FHD</td><td>-</td></tr>
+    <tr><td>Sistem Operasi</td><td>Windows 11</td><td>-</td></tr>
+    <tr><td>Prosesor</td><td>AMD Ryzen 5 7430U</td><td>-</td></tr>
+    <tr><td>Grafis</td><td>AMD Radeon Graphics</td><td>-</td></tr>
+    <tr><td>RAM</td><td>8 GB</td><td>-</td></tr>
+    <tr><td>Penyimpanan</td><td>256 GB</td><td>-</td></tr>
+    <tr><td>Konektivitas</td><td>HDMI, USB, WIFI, BT, Audio, microSD</td><td>-</td></tr>
+  </table>
 
   <div class="section-title">Identitas Barang</div>
   <table class="data">
