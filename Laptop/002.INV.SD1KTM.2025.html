@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Inventaris Barang</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #f7f5f3;
+      color: #000;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 40px 50px;
+      position: relative;
+    }
+
+    /* Badge kiri */
+    .badge {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      border: 2px solid #c0392b;
+      color: #c0392b;
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Pita kanan */
+    .ribbon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #c0392b;
+      color: #fff;
+      padding: 20px 25px;
+      font-weight: bold;
+      font-size: 18px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+      text-align: center;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      height: 90px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0 5px;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+      margin: 30px 0 15px;
+    }
+
+    .data {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data td {
+      padding: 6px 4px;
+      vertical-align: top;
+      font-size: 18px;
+    }
+
+    .label {
+      width: 220px;
+      font-weight: bold;
+    }
+
+    .colon {
+      width: 10px;
+    }
+
+    /* spesifikasi */
+    .spec {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .spec h3 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      background: #000;
+      top: 0;
+      bottom: 0;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .contact {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="badge">Kondisi Unit<br>Baik</div>
+  <div class="ribbon">Unit<br>Ke-1</div>
+
+  <div class="logo">
+    <img src="asset/logo-sekolah.png" alt="Logo Sekolah">
+  </div>
+
+  <h1>DETAIL INVENTARIS BARANG</h1>
+  <div class="subtitle">SDIKTM-LTPWIN-DACFI</div>
+
+  <div class="section-title">Data Utama</div>
+  <table class="data">
+    <tr><td class="label">Nama Barang</td><td class="colon">:</td><td>Laptop</td></tr>
+    <tr><td class="label">Jenis Barang</td><td class="colon">:</td><td>Perangkat TIK</td></tr>
+    <tr><td class="label">Merk / Model</td><td class="colon">:</td><td>DAC / DAC F1 R5723PE</td></tr>
+    <tr><td class="label">Tahun Perolehan</td><td class="colon">:</td><td>2025</td></tr>
+    <tr><td class="label">Sumber Dana</td><td class="colon">:</td><td>APBN Pusat</td></tr>
+    <tr><td class="label">Jumlah</td><td class="colon">:</td><td>1</td></tr>
+    <tr><td class="label">Penanggung Jawab</td><td class="colon">:</td><td>Operator Sekolah</td></tr>
+  </table>
+
+  <div class="section-title">Spesifikasi Teknis</div>
+  <div class="spec">
+    <div>
+      <h3>ORIGINAL SPEK</h3>
+      <table class="data">
+        <tr><td class="label">Ukuran Layar</td><td class="colon">:</td><td>14 Inch</td></tr>
+        <tr><td class="label">Resolusi</td><td class="colon">:</td><td>1080p FHD</td></tr>
+        <tr><td class="label">Sistem Operasi</td><td class="colon">:</td><td>Windows 11</td></tr>
+        <tr><td class="label">Prosesor</td><td class="colon">:</td><td>AMD Ryzen 5 7430U</td></tr>
+        <tr><td class="label">Grafis</td><td class="colon">:</td><td>AMD Radeon Graphics</td></tr>
+        <tr><td class="label">RAM</td><td class="colon">:</td><td>8 GB</td></tr>
+        <tr><td class="label">Penyimpanan</td><td class="colon">:</td><td>256 GB</td></tr>
+        <tr><td class="label">Konektivitas</td><td class="colon">:</td><td>HDMI, USB, WIFI, BT, Audio, microSD</td></tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>UPGRADE SPEK</h3>
+      <table class="data">
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+        <tr><td>-</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">Identitas Barang</div>
+  <table class="data">
+    <tr><td class="label">Nomor Seri</td><td class="colon">:</td><td>DLDLEP5251101825</td></tr>
+    <tr><td class="label">Nomor Inventaris</td><td class="colon">:</td><td>002/INV/SDIKTM/2025</td></tr>
+  </table>
+
+  <div class="section-title">Riwayat dan Administrasi</div>
+  <table class="data">
+    <tr><td class="label">Tanggal Terima</td><td class="colon">:</td><td>25 Desember 2025</td></tr>
+    <tr><td class="label">Vendor</td><td class="colon">:</td><td>CV Master Media</td></tr>
+    <tr><td class="label">Garansi</td><td class="colon">:</td><td>1 Tahun (s.d. Desember 2026)</td></tr>
+    <tr><td class="label">Perawatan Terakhir</td><td class="colon">:</td><td>-</td></tr>
+    <tr><td class="label">Catatan</td><td class="colon">:</td><td>Digunakan oleh Tenaga Operator Sekolah</td></tr>
+  </table>
+
+  <div class="footer">TERAKHIR DIPERBARUI: 12 JANUARI 2026</div>
+
+  <div class="contact">
+    <div>📧 sdlkertawirama@gmail.com</div>
+    <div>🌐 www.sdlkertawirama.sch.id</div>
+  </div>
+
+</div>
+
+</body>
+</html>
