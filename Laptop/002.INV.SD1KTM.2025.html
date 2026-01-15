@@ -1,123 +1,206 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detail Inventaris Barang</title>
-  <style>
-    body {
-      box-sizing: border-box;
-    }
-      margin: 0;
-      font-family: "Times New Roman", serif;
-      background: #f7f5f3;
-      color: #000;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Inventaris Barang</title>
 
-    .page {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 40px 50px;
-      position: relative;
-    }
+<style>
+/* ================= RESET & DASAR ================= */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
-    .badge {
-      position: absolute;
-      top: 30px;
-      left: 40px;
-      border: 2px solid #c0392b;
-      color: #c0392b;
-      padding: 6px 14px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 14px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background: #f7f5f3;
+  color: #000;
+}
 
-    .ribbon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #c0392b;
-      color: #fff;
-      padding: 20px 25px;
-      font-weight: bold;
-      font-size: 18px;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-      text-align: center;
-    }
+/* ================= HALAMAN ================= */
+.page {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 40px 50px;
+  position: relative;
+}
 
-    .logo { text-align: center; margin-top: 20px; }
-    .logo img { height: 90px; }
+/* ================= BADGE & RIBBON ================= */
+.badge {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  border: 2px solid #c0392b;
+  color: #c0392b;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
 
-    h1 {
-      text-align: center;
-      margin: 20px 0 5px;
-      font-size: 30px;
-      letter-spacing: 1px;
-    }
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #c0392b;
+  color: #fff;
+  padding: 20px 25px;
+  font-weight: bold;
+  font-size: 18px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  text-align: center;
+}
 
-    .subtitle {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 14px;
-    }
+/* ================= LOGO ================= */
+.logo {
+  text-align: center;
+  margin-top: 10px;
+}
 
-    .section-title {
-      font-size: 22px;
-      font-weight: bold;
-      border-bottom: 2px solid #000;
-      margin: 30px 0 15px;
-    }
+.logo img {
+  height: 90px;
+  max-width: 100%;
+}
 
-    .data {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 18px;
-    }
+/* ================= JUDUL ================= */
+h1 {
+  text-align: center;
+  margin: 20px 0 5px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
 
-    .data td { padding: 6px 4px; vertical-align: top; }
-    .label { width: 220px; font-weight: bold; }
-    .colon { width: 10px; }
+.subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
 
-    /* === SPESIFIKASI TEKNIS (TABLE STYLE) === */
-    .specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12pt;
-      margin-top: 10px;
-    }
+/* ================= SECTION ================= */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  margin: 30px 0 15px;
+}
 
-    .specs-table th {
-      background-color: #f8f8f8;
-      color: #333;
-      font-weight: bold;
-      padding: 8px;
-      text-align: left;
-      border: 1px solid #e0e0e0;
-    }
+/* ================= TABLE UMUM ================= */
+.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
 
-    .specs-table td {
-      padding: 8px;
-      border: 1px solid #e0e0e0;
-    }
+.data td {
+  padding: 6px 4px;
+  vertical-align: top;
+}
 
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-    }
+.label { width: 220px; font-weight: bold; }
+.colon { width: 10px; }
 
-    .contact {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      font-size: 14px;
-    }
-  </style>
+/* ================= SPESIFIKASI ================= */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 10px;
+  min-width: 600px;
+}
+
+.specs-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.specs-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE HP ================= */
+@media (max-width: 768px) {
+
+  .page {
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .data {
+    font-size: 14px;
+  }
+
+  .badge,
+  .ribbon {
+    position: static;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ================= PRINT A4 ================= */
+@media print {
+
+  body {
+    background: #fff;
+  }
+
+  .page {
+    margin: 0;
+    padding: 15mm;
+    box-shadow: none;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    page-break-after: avoid;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <div class="page">
@@ -126,7 +209,7 @@
   <div class="ribbon">Unit<br>Ke-1</div>
 
   <div class="logo">
-    <img src="logo-sd-sekolah.png" alt="Logo Sekolah SDN 1 Kertawirama">
+    <img src="assets/logo-sd-sekolah.png" alt="Logo Sekolah">
   </div>
 
   <h1>DETAIL INVENTARIS BARANG</h1>
@@ -139,26 +222,28 @@
     <tr><td class="label">Merk / Model</td><td class="colon">:</td><td>DAC / DAC F1 R5723PE</td></tr>
     <tr><td class="label">Tahun Perolehan</td><td class="colon">:</td><td>2025</td></tr>
     <tr><td class="label">Sumber Dana</td><td class="colon">:</td><td>APBN Pusat</td></tr>
-    <tr><td class="label">Jumlah</td><td class="colon">:</td><td>1</td></tr>
+    <tr><td class="label">Jumlah</td><td class="colon">:</td><td>1 Unit</td></tr>
     <tr><td class="label">Penanggung Jawab</td><td class="colon">:</td><td>Operator Sekolah</td></tr>
   </table>
 
   <div class="section-title">Spesifikasi Teknis</div>
-  <table class="specs-table">
-    <tr>
-      <th>Spesifikasi</th>
-      <th>Original Spek</th>
-      <th>Upgrade Spek</th>
-    </tr>
-    <tr><td>Ukuran Layar</td><td>14 Inch</td><td>-</td></tr>
-    <tr><td>Resolusi</td><td>1080p FHD</td><td>-</td></tr>
-    <tr><td>Sistem Operasi</td><td>Windows 11</td><td>-</td></tr>
-    <tr><td>Prosesor</td><td>AMD Ryzen 5 7430U</td><td>-</td></tr>
-    <tr><td>Grafis</td><td>AMD Radeon Graphics</td><td>-</td></tr>
-    <tr><td>RAM</td><td>8 GB</td><td>-</td></tr>
-    <tr><td>Penyimpanan</td><td>256 GB</td><td>-</td></tr>
-    <tr><td>Konektivitas</td><td>HDMI, USB, WIFI, BT, Audio, microSD</td><td>-</td></tr>
-  </table>
+  <div class="table-wrap">
+    <table class="specs-table">
+      <tr>
+        <th>Spesifikasi</th>
+        <th>Original</th>
+        <th>Upgrade</th>
+      </tr>
+      <tr><td>Ukuran Layar</td><td>14 Inch</td><td>-</td></tr>
+      <tr><td>Resolusi</td><td>1080p FHD</td><td>-</td></tr>
+      <tr><td>Sistem Operasi</td><td>Windows 11</td><td>-</td></tr>
+      <tr><td>Prosesor</td><td>AMD Ryzen 5 7430U</td><td>-</td></tr>
+      <tr><td>Grafis</td><td>AMD Radeon Graphics</td><td>-</td></tr>
+      <tr><td>RAM</td><td>8 GB</td><td>-</td></tr>
+      <tr><td>Penyimpanan</td><td>256 GB</td><td>-</td></tr>
+      <tr><td>Konektivitas</td><td>HDMI, USB, WIFI, BT, Audio, microSD</td><td>-</td></tr>
+    </table>
+  </div>
 
   <div class="section-title">Identitas Barang</div>
   <table class="data">
@@ -166,13 +251,12 @@
     <tr><td class="label">Nomor Inventaris</td><td class="colon">:</td><td>002/INV/SDIKTM/2025</td></tr>
   </table>
 
-  <div class="section-title">Riwayat dan Administrasi</div>
+  <div class="section-title">Riwayat & Administrasi</div>
   <table class="data">
     <tr><td class="label">Tanggal Terima</td><td class="colon">:</td><td>25 Desember 2025</td></tr>
     <tr><td class="label">Vendor</td><td class="colon">:</td><td>CV Master Media</td></tr>
-    <tr><td class="label">Garansi</td><td class="colon">:</td><td>1 Tahun (s.d. Desember 2026)</td></tr>
-    <tr><td class="label">Perawatan Terakhir</td><td class="colon">:</td><td>-</td></tr>
-    <tr><td class="label">Catatan</td><td class="colon">:</td><td>Digunakan oleh Tenaga Operator Sekolah</td></tr>
+    <tr><td class="label">Garansi</td><td class="colon">:</td><td>1 Tahun</td></tr>
+    <tr><td class="label">Catatan</td><td class="colon">:</td><td>Digunakan oleh Operator Sekolah</td></tr>
   </table>
 
   <div class="footer">TERAKHIR DIPERBARUI: 12 JANUARI 2026</div>
@@ -183,6 +267,5 @@
   </div>
 
 </div>
-
 </body>
 </html>
