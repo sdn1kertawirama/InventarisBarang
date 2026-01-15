@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eee;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    background: #fff;
+    margin: 30px auto;
+    padding: 40px;
+    position: relative;
+}
+
+/* BADGE */
+.badge-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border: 2px solid #c0392b;
+    color: #c0392b;
+    padding: 10px 16px;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.badge-right {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #c0392b;
+    color: #fff;
+    padding: 16px 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+.kode {
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    margin-top: 28px;
+}
+
+h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td {
+    padding: 6px 0;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+/* SPESIFIKASI TEKNIS */
+.spec-compare {
+    display: grid;
+    grid-template-columns: 3fr 20px 2fr;
+    margin-top: 15px;
+}
+
+.spec-title {
+    text-align: center;
+    font-weight: bold;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.spec-left td:first-child {
+    width: 160px;
+}
+
+.spec-left td:nth-child(2) {
+    width: 10px;
+}
+
+.spec-divider {
+    border-left: 3px solid #000;
+    margin: 0 auto;
+}
+
+.spec-right {
+    padding-left: 20px;
+}
+
+.spec-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-right li {
+    padding: 7px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 13px;
+}
